@@ -39,6 +39,26 @@ public class Main {
                     AnaliseNumerica visu = new AnaliseNumerica();
                     visu.visualizarLista();
                 }
+                if (escolha2 == 3){
+                    System.out.println("Soma de todos os numeros: ");
+                    AnaliseNumerica somando = new AnaliseNumerica();
+                    somando.calcularSoma();
+                }
+                if (escolha2 == 4){
+                    System.out.println("Segue a média: ");
+                    AnaliseNumerica tirandoMedia = new AnaliseNumerica();
+                    tirandoMedia.calcularMedia();
+                }
+                if (escolha2 == 5){
+                    System.out.println("Segue o maior número da lista: ");
+                    AnaliseNumerica maiorNumero = new AnaliseNumerica();
+                    maiorNumero.encontrarMaior();
+                }
+                if (escolha2 == 6){
+                    System.out.println("Segue o menor número da lista: ");
+                    AnaliseNumerica menorNumero = new AnaliseNumerica();
+                    menorNumero.encontrarMenor();
+                }
             }
         }
     }
