@@ -10,3 +10,4 @@ Instagram - <https://www.instagram.com/waldyr.skr/>
 Dias | Tempo  | Observações |
 -----|------- |-------------|
 1    | 35 min | Nenhuma
+2    | 45 min | Cuidado com o static
