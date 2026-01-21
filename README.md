@@ -11,3 +11,4 @@ Dias | Tempo  | Observações |
 -----|------- |-------------|
 1    | 35 min | Nenhuma
 2    | 45 min | Cuidado com o static
+3    | 50 min | se lembrar de puxar as coisas daqui antes ou mergiar tudo depois
