@@ -7,57 +7,54 @@ public class Main {
 
         AnaliseNumerica analise = new AnaliseNumerica();
 
+        System.out.println("------------------------------------------------------------------");
         System.out.println("Olá, você agora tem um programa para analisar uma lista de números");
-        System.out.println("");
 
         Scanner teclado  = new Scanner(System.in);
 
         boolean rodando = true;
 
         while (rodando == true){
-            System.out.println("MENU PRINCIPAL");
-            System.out.println("Escolha você quer por um arquivo que tem uma lista ou fazer sua lista aqui?");
-            System.out.println("");
-            System.out.println("Lista autoral - 1");
-            System.out.println("Arquivo com lista - 2");
-            System.out.println("Encerrar programa - 0");
-            System.out.println("");
+            System.out.println("------------------------------------------------------------------");
+            System.out.println("Você tem duas opções para analisar uma lista de números");
+            System.out.println("------------------------------------------------------------------");
+            System.out.println("1 - Crie uma lista ou acesse a lista atual");
+            System.out.println("2 - Mande um arquivo .txt");
+            System.out.println("------------------------------------------------------------------");
+            System.out.println("0 - Encerrar o programa");
+            System.out.println("------------------------------------------------------------------");
 
             int escolha = teclado.nextInt();
             if (escolha == 1){
-                System.out.println("Aqui você pode: ADICIONAR NUMERO / VISUALIZAR LISTA / " +
-                        "CALCULAR SOMAR / CALCULAR MÉDIA / MAIOR NUMERO / MENOR NUMERO");
+                System.out.println("Escolhas: 1 - ADICIONAR NúMERO / 2 - VISUALIZAR LISTA / " +
+                        "3 - CALCULAR SOMAR / 4 - CALCULAR MÉDIA / 5 - MAIOR NUMERO / 6 - MENOR NUMERO");
+                System.out.println("------------------------------------------------------------------");
                 int escolha2 = teclado.nextInt();
+                //Fazer um switch case aqui
                 if (escolha2 == 1){
-                    System.out.println("Digite o número: ");
+                    System.out.print("Adicionando o número:  ");
                     double numero = teclado.nextDouble();
-                    AnaliseNumerica add = new AnaliseNumerica();
-                    add.adicionarNumero(numero);
+                    analise.adicionarNumero(numero);
                 }
                 if (escolha2 == 2){
-                    System.out.println("Segue a lista: ");
-                    AnaliseNumerica visu = new AnaliseNumerica();
-                    visu.visualizarLista();
+                    System.out.println("Lista: ");
+                    analise.visualizarLista();
                 }
                 if (escolha2 == 3){
-                    System.out.println("Soma de todos os numeros: ");
-                    AnaliseNumerica somando = new AnaliseNumerica();
-                    somando.calcularSoma();
+                    System.out.println("A soma de todos os número é: ");
+                    analise.calcularSoma();
                 }
                 if (escolha2 == 4){
-                    System.out.println("Segue a média: ");
-                    AnaliseNumerica tirandoMedia = new AnaliseNumerica();
-                    tirandoMedia.calcularMedia();
+                    System.out.println("Média dos números: ");
+                    analise.calcularMedia();
                 }
                 if (escolha2 == 5){
-                    System.out.println("Segue o maior número da lista: ");
-                    AnaliseNumerica maiorNumero = new AnaliseNumerica();
-                    maiorNumero.encontrarMaior();
+                    System.out.println("Maior número encontrado: ");
+                    analise.encontrarMaior();
                 }
                 if (escolha2 == 6){
-                    System.out.println("Segue o menor número da lista: ");
-                    AnaliseNumerica menorNumero = new AnaliseNumerica();
-                    menorNumero.encontrarMenor();
+                    System.out.println("Menor número encontrado ");
+                    analise.encontrarMenor();
                 }
             }
         }

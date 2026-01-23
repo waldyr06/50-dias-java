@@ -21,7 +21,8 @@ public class AnaliseNumerica {
         for (Double n : listaNumeros) {
             resultado += n;
         }
-        System.out.printf("Soma total: %.2f", resultado);
+        System.out.printf(String.valueOf(resultado));
+        System.out.println("");
     }
 
     public void calcularMedia() {
@@ -31,6 +32,7 @@ public class AnaliseNumerica {
         }
         double mediaFinal = media / listaNumeros.size();
         System.out.printf(String.valueOf(mediaFinal));
+        System.out.println("");
     }
 
     public void encontrarMaior() {
@@ -41,6 +43,7 @@ public class AnaliseNumerica {
             }
         }
         System.out.printf(String.valueOf(maior));
+        System.out.println("");
     }
 
     public void encontrarMenor(){
@@ -51,5 +54,6 @@ public class AnaliseNumerica {
             }
         }
         System.out.printf(String.valueOf(menor));
+        System.out.println("");
     }
 }
