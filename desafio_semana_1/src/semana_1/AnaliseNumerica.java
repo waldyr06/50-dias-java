@@ -8,7 +8,8 @@ public class AnaliseNumerica {
 
     public void visualizarLista() {
         for (Double n : listaNumeros) {
-            System.out.println(n);
+            System.out.printf("Número: %.2f: ", n);
+            System.out.println("");
         }
     }
 
@@ -21,7 +22,7 @@ public class AnaliseNumerica {
         for (Double n : listaNumeros) {
             resultado += n;
         }
-        System.out.printf(String.valueOf(resultado));
+        System.out.printf("Número: %.2f", resultado);
         System.out.println("");
     }
 
@@ -31,7 +32,7 @@ public class AnaliseNumerica {
             media += n;
         }
         double mediaFinal = media / listaNumeros.size();
-        System.out.printf(String.valueOf(mediaFinal));
+        System.out.printf("Número: %.2f", mediaFinal);
         System.out.println("");
     }
 
@@ -42,7 +43,7 @@ public class AnaliseNumerica {
                 maior = n;
             }
         }
-        System.out.printf(String.valueOf(maior));
+        System.out.printf("Número: %.2f", maior);
         System.out.println("");
     }
 
@@ -53,7 +54,7 @@ public class AnaliseNumerica {
                 menor = n;
             }
         }
-        System.out.printf(String.valueOf(menor));
+        System.out.printf("Número: %.2f", menor);
         System.out.println("");
     }
 }

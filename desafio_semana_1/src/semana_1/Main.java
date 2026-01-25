@@ -2,6 +2,7 @@ package semana_1;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Main {
@@ -25,43 +26,51 @@ public class Main {
             System.out.println("0 - Encerrar o programa");
             System.out.println("------------------------------------------------------------------");
 
-            int escolha = teclado.nextInt();
-            teclado.nextLine();
+            int escolha = -1;
+            try {
+                escolha = teclado.nextInt();
+                teclado.nextLine();
 
-            if (escolha == 1) {
-                System.out.println("Escolhas: 1 - ADICIONAR NÚMERO / 2 - VISUALIZAR LISTA / " +
-                        "3 - CALCULAR O TOTAL / 4 - CALCULAR A MÉDIA / 5 - ENCONTRE O MAIOR NUMERO / 6 - ENCONTRE O MENOR NUMERO");
-                System.out.println("------------------------------------------------------------------");
+                if (escolha == 1) {
+                    System.out.println("Escolhas: 1 - ADICIONAR NÚMERO / 2 - VISUALIZAR LISTA / " +
+                            "3 - CALCULAR O TOTAL / 4 - CALCULAR A MÉDIA / 5 - ENCONTRE O MAIOR NUMERO / 6 - ENCONTRE O MENOR NUMERO");
+                    System.out.println("------------------------------------------------------------------");
 
-                int escolha2 = teclado.nextInt();
-                switch (escolha2) {
-                    case 1 -> {
-                        System.out.print("Adicionando o número:  ");
-                        double numero = teclado.nextDouble();
-                        analise.adicionarNumero(numero);
-                    }
-                    case 2 -> {
-                        System.out.println("Lista: ");
-                        analise.visualizarLista();
-                    }
-                    case 3 -> {
-                        System.out.println("A soma de todos os número é: ");
-                        analise.calcularSoma();
-                    }
-                    case 4 -> {
-                        System.out.println("Média dos números: ");
-                        analise.calcularMedia();
-                    }
-                    case 5 -> {
-                        System.out.println("Maior número encontrado: ");
-                        analise.encontrarMaior();
-                    }
-                    case 6 -> {
-                        System.out.println("Menor número encontrado ");
-                        analise.encontrarMenor();
+                    int escolha2 = teclado.nextInt();
+                    switch (escolha2) {
+                        case 1 -> {
+                            System.out.print("Adicionando o número:  ");
+                            double numero = teclado.nextDouble();
+                            analise.adicionarNumero(numero);
+                        }
+                        case 2 -> {
+                            System.out.println("Lista: ");
+                            analise.visualizarLista();
+                        }
+                        case 3 -> {
+                            System.out.println("A soma de todos os número é: ");
+                            analise.calcularSoma();
+                        }
+                        case 4 -> {
+                            System.out.println("Média dos números: ");
+                            analise.calcularMedia();
+                        }
+                        case 5 -> {
+                            System.out.println("Maior número encontrado: ");
+                            analise.encontrarMaior();
+                        }
+                        case 6 -> {
+                            System.out.println("Menor número encontrado ");
+                            analise.encontrarMenor();
+                        }
                     }
                 }
+            } catch (InputMismatchException e) {
+                System.out.println("ERRO: Você digitou letras ou símbolos");
+                System.out.println("Digite apenas números!");
+                teclado.nextLine();
             }
+
 
             if (escolha == 2) {
 
@@ -125,11 +134,11 @@ public class Main {
                             analise.encontrarMenor();
                         }
                     }
-                }  catch (FileNotFoundException e){
+                } catch (FileNotFoundException e) {
                     System.out.println("ERRO: Arquivo não encontrado!!!");
                 }
             }
-            if (escolha == 0){
+            if (escolha == 0) {
                 rodando = false;
             }
         }

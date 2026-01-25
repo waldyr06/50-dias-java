@@ -19,6 +19,7 @@ Dias | Tempo  | Observações |
 3    | 50 min | se lembrar de puxar as coisas daqui antes ou mergiar tudo depois
 4    | 40 min | Correção de pequenos erros
 5    | 2h30min| Finalizado
+6    | 30 min | Tratamento de erros e formatação de saídas 
 
 
 ## Considerações Finais
