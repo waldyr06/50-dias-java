@@ -20,7 +20,7 @@ Dias | Tempo  | Observações |
 4    | 40 min | Correção de pequenos erros
 5    | 2h30min| Finalizado
 6    | 30 min | Tratamento de erros e formatação de saídas 
-
+7    | 55 min | Estou com dificuldade para sair do ponto inicial
 
 ## Considerações Finais
 > Sobre o desafio, estou satisfeito com o progresso. Embora identifique
