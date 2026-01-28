@@ -12,6 +12,7 @@ exerções entre outros aprendizados.
 
 ## Contagem dos dias  ⏳
 
+## Semana 1
 Dias | Tempo  | Observações |
 -----|------- |-------------|
 1    | 35 min | Nenhuma
@@ -20,7 +21,11 @@ Dias | Tempo  | Observações |
 4    | 40 min | Correção de pequenos erros
 5    | 2h30min| Finalizado
 6    | 30 min | Tratamento de erros e formatação de saídas 
+## Semana 2
+Dias | Tempo  | Observações |
+-----|------- |-------------|
 7    | 55 min | Estou com dificuldade para sair do ponto inicial
+8    | 1h     | Hoje consegui progredir bem...
 
 ## Considerações Finais
 > Sobre o desafio, estou satisfeito com o progresso. Embora identifique

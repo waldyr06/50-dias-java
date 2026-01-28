@@ -5,11 +5,11 @@ public class Tarefa {
     private static int contador = 0;
 
     private int id;
-    public String titulo;
-    public String status;
+    private String titulo;
+    private String status;
 
     public Tarefa(String titulo) {
-        this.id = contador++;
+        this.id = ++contador;
         this.titulo = titulo;
         this.status = "Pendente";
     }
@@ -36,6 +36,6 @@ public class Tarefa {
 
     @Override
     public String toString(){
-        return id + "-" + titulo + status;
+        return id + " - " + titulo + " - " + status;
     }
 }
