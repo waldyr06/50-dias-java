@@ -43,10 +43,10 @@ public class GerenciadorTarefas {
     public void atualizarTarefa(int id){
         Tarefa tarefa = buscarTarefas(id);
         if (tarefa != null){
-            System.out.println("Tarefa inexistente. Você digitou um id que não temos na memória.");
+            tarefa.setStatus("Concluido");
         }
         else{
-            tarefa.setStatus("Concluido");
+            System.out.println("Tarefa inexistente. Você digitou um id que não temos na memória.");
         }
     }
 }

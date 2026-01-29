@@ -30,10 +30,33 @@ public class Main_2 {
                     String titulo = teclado.nextLine();
 
                     gerenciador.adicionarTarefa(titulo);
+
                 }
 
                 case 2 -> {
                     gerenciador.listarTarefas();
+                }
+
+                case 3 -> {
+                    System.out.println("Digite  o ID da tarefa: ");
+                    int codigo = teclado.nextInt();
+
+                    gerenciador.atualizarTarefa(codigo);
+                }
+
+                case 4 -> {
+                    System.out.println("Digite o ID da tarefa: ");
+                    int codigo =  teclado.nextInt();
+
+                    gerenciador.removerTarefa(codigo);
+                }
+
+                case 5 -> {
+                    System.out.println("Encerrando...");
+                    rodando = false;
+                }
+                default -> {
+                    System.out.println("Opção errada padrão, essa dai não existe viu");
                 }
             }
         }
