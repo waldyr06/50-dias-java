@@ -36,6 +36,6 @@ public class Tarefa {
 
     @Override
     public String toString(){
-        return id + " - " + titulo + " - " + status;
+        return "ID: " + id + " | " + "Título: "+ titulo + " | " + "Status: "+ status;
     }
 }

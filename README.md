@@ -27,6 +27,7 @@ Dias | Tempo  | Observações |
 7    | 55 min | Estou com dificuldade para sair do ponto inicial
 8    | 1h     | Hoje consegui progredir bem...
 9    | 35 min | Finalizei o código base no crud
+10   | 2h     |
 
 ## Considerações Finais
 > Sobre o desafio, estou satisfeito com o progresso. Embora identifique
