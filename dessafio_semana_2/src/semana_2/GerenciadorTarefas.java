@@ -65,4 +65,17 @@ public class GerenciadorTarefas {
             System.out.println("Tarefa inexistente. Você digitou um id que não existe :/.");
         }
     }
+    public void atualizarTitulo(int id, String novoTitulo){
+        Tarefa tarefa = buscarTarefas(id);
+        if (tarefa == null){
+            return;
+        }
+        if (tarefa != null){
+            tarefa.setTitulo(novoTitulo);
+            System.out.println("Atualizado o título com sucesso.");
+        }
+        else{
+            System.out.println("Tarefa inexistente. Você digitou um id que não existe :/.");
+        }
+    }
 }

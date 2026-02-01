@@ -58,11 +58,31 @@ public class Main_2 {
 
                 case 3 -> {
                     int codigo = 0;
+                    int opcao = 0;
                     while (true){
                         try {
-                            System.out.print("Digite  o ID da tarefa: ");
-                            codigo = teclado.nextInt();
-                            teclado.nextLine();
+                            System.out.println("Você quer atualizar o título ou status?");
+                            System.out.println("9 - Título");
+                            System.out.println("8 - Status");
+                            opcao = teclado.nextInt();
+
+                            if (opcao == 9){
+                                System.out.print("Digite  o ID da tarefa: ");
+                                codigo = teclado.nextInt();
+                                teclado.nextLine();
+                                gerenciador.buscarTarefas(codigo);
+
+                                System.out.println("Digite o novo título: ");
+                                String novoTitulo = teclado.nextLine();
+                                gerenciador.atualizarTitulo(codigo, novoTitulo);
+                            }
+
+                            if (opcao == 8){
+                                System.out.print("Digite  o ID da tarefa: ");
+                                codigo = teclado.nextInt();
+                                teclado.nextLine();
+                                gerenciador.buscarTarefas(codigo);
+                            }
                             break;
                         }
                         catch (InputMismatchException e){
@@ -70,7 +90,6 @@ public class Main_2 {
                             teclado.nextLine();
                         }
                     }
-                    gerenciador.atualizarTarefa(codigo);
                 }
 
                 case 4 -> {
