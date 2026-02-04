@@ -4,7 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/50-dias-java.iml" filepath="$PROJECT_DIR$/.idea/50-dias-java.iml" />
       <module fileurl="file://$PROJECT_DIR$/desafio_semana_1/desafio_semana_1.iml" filepath="$PROJECT_DIR$/desafio_semana_1/desafio_semana_1.iml" />
-      <module fileurl="file://$PROJECT_DIR$/dessafio_semana_2/dessafio_semana_2.iml" filepath="$PROJECT_DIR$/dessafio_semana_2/dessafio_semana_2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/desafio_semana_2/desafio_semana_2.iml" filepath="$PROJECT_DIR$/desafio_semana_2/desafio_semana_2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/desafio_semana_3/desafio_semana_3.iml" filepath="$PROJECT_DIR$/desafio_semana_3/desafio_semana_3.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/introducao/introducao.iml" filepath="$PROJECT_DIR$/.idea/introducao/introducao.iml" />
     </modules>
   </component>
