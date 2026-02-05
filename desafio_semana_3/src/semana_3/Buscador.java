@@ -10,7 +10,7 @@ public class Buscador {
 
     private static final String URL_Path = "https://rickandmortyapi.com/api/character/";
 
-    public String buscarporId(int id) throws IOException, InterruptedException {
+    public String buscarPorId(int id) throws IOException, InterruptedException {
         HttpClient client = HttpClient.newHttpClient();
 
         HttpRequest request = HttpRequest.newBuilder()
@@ -20,6 +20,25 @@ public class Buscador {
 
         HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
 
-        return "Response: " + response.body();
+        String jsonBruto = "Response: " + response.body();
+        return jsonBruto;
+    }
+
+    public String buscarPorNome(String nomeUsuario) throws IOException, InterruptedException {
+
+        String nomeFormatado = nomeUsuario.replace(" ", "%20");
+
+        String linkFinal = URL_Path + "?name=" + nomeFormatado;
+
+        HttpClient client = HttpClient.newHttpClient();
+
+        HttpRequest request = HttpRequest.newBuilder()
+                .uri(URI.create(linkFinal))
+                .GET()
+                .build();
+
+        HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+
+        return response.body();
     }
 }
