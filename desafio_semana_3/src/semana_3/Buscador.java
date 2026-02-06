@@ -20,8 +20,7 @@ public class Buscador {
 
         HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
 
-        String jsonBruto = "Response: " + response.body();
-        return jsonBruto;
+        return response.body();
     }
 
     public String buscarPorNome(String nomeUsuario) throws IOException, InterruptedException {
@@ -34,6 +33,22 @@ public class Buscador {
 
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create(linkFinal))
+                .GET()
+                .build();
+
+        HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+
+        return response.body();
+    }
+
+    public String buscarPagina(int numPagina) throws IOException, InterruptedException {
+
+        String urlFinal = URL_Path + "?page=" + numPagina;
+
+        HttpClient client = HttpClient.newHttpClient();
+
+        HttpRequest request = HttpRequest.newBuilder()
+                .uri(URI.create(urlFinal))
                 .GET()
                 .build();
 
