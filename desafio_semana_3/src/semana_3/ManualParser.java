@@ -30,6 +30,31 @@ public class ManualParser {
         return listaEncontrada;
     }
 
+    public List<String> pegarIds(String json) {
+        List<String> listaIds = new ArrayList<>();
+
+        String chave = "\"id\":";
+
+        int cursor = 0;
+        while (true) {
+            int indiceChave = json.indexOf(chave, cursor);
+
+            if (indiceChave == -1) {
+                break;
+            }
+
+            int inicioValor = indiceChave + chave.length();
+
+            int fimValor = json.indexOf(",", inicioValor);
+
+            String id = json.substring(inicioValor, fimValor);
+            listaIds.add(id);
+
+            cursor = fimValor;
+        }
+        return listaIds;
+    }
+
     public String pegarLocalizacao(String json) {
         String chaveLoc = "\"location\":";
         int posLocation = json.indexOf(chaveLoc);

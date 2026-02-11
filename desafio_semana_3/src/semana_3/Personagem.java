@@ -2,14 +2,17 @@ package semana_3;
 
 public class Personagem {
 
+    private String id;
     private String nome;
     private String status;
     private String especie;
     private String origem;
 
-    public Personagem(String nome, String origem){
+    public Personagem(String id, String nome, String status, String especie) {
+        this.id = id;
         this.nome = nome;
-        this.origem = origem;
+        this.status = status;
+        this.especie = especie;
     }
 
     public String getStatus() {
@@ -45,7 +48,7 @@ public class Personagem {
     }
 
     @Override
-    public String toString(){
-        return "Nome: " + nome + "Status: " + status + "Especie: " + especie + "Origem: " + origem;
+    public String toString() {
+        return "🆔 " + id + " | 👤 " + nome + " | 💓 " + status + " | 👽 " + especie;
     }
 }
