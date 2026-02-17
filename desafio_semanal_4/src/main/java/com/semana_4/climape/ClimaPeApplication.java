@@ -1,4 +1,4 @@
-package com.semana_4.demo;
+package com.semana_4.climape;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
