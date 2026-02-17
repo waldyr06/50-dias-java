@@ -48,7 +48,6 @@ public class ClimaService {
         List<Cidade> lista = new ArrayList<>();
 
         try {
-            // Agora chamamos o método auxiliar abaixo (e não o assistente direto)
             adicionarCidade("Recife", -8.05, -34.88, lista);
             adicionarCidade("Caruaru", -8.28, -35.97, lista);
             adicionarCidade("Petrolina", -9.39, -40.50, lista);
@@ -62,15 +61,11 @@ public class ClimaService {
         return lista;
     }
 
-    // 2. O Método Auxiliar (Privado) - A "Fábrica" de Cidades
     private void adicionarCidade(String nome, double lat, double lon, List<Cidade> lista) throws Exception {
-        //Aqui sim usamos o assistente para buscar os dados
         var resposta = assistente.pegarClima(lat, lon);
 
-        // Traduzimos o código
         String clima = tradutor(resposta.getCurrent_weather().getWeathercode());
 
-        // Criamos a cidade e adicionamos na lista
         lista.add(new Cidade(nome, resposta.getCurrent_weather().getTemperature(), clima, ""));
     }
 }

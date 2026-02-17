@@ -1,6 +1,7 @@
 package com.semana_4.climape.client;
 
 import com.semana_4.climape.model.RespostaOpenMeteo;
+import org.springframework.stereotype.Component;
 import tools.jackson.databind.ObjectMapper;
 
 import java.io.IOException;
@@ -10,6 +11,7 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.time.Duration;
 
+@Component
 public class OpenMeteoClient {
 
     public RespostaOpenMeteo pegarClima(double latitude, double longitude) throws IOException, InterruptedException {

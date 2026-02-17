@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Clima PE - Previsão do Tempo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background-color: #f0f4f8; }
+        .topo-pe {
+            background: linear-gradient(135deg, #003399 0%, #0055aa 100%);
+            color: white;
+            padding: 40px 0;
+            margin-bottom: 30px;
+            border-bottom: 5px solid #ffcc00;
+        }
+        .card-cidade {
+            transition: transform 0.2s;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .card-cidade:hover { transform: translateY(-5px); }
+        .temp { font-size: 2.5rem; font-weight: bold; color: #003399; }
+    </style>
+</head>
+<body>
+
+<div class="topo-pe text-center">
+    <h1>☀️ Clima PE</h1>
+    <p>Previsão do tempo em tempo real para as principais cidades de Pernambuco</p>
+</div>
+
+<div class="container">
+    <div class="row g-4">
+        <div class="col-md-4" th:each="cidade : ${cidades}">
+            <div class="card card-cidade h-100 text-center p-4">
+                <div class="card-body">
+                    <h2 class="card-title fw-bold" th:text="${cidade.nome}">Recife</h2>
+                    <hr>
+                    <p class="temp" th:text="${cidade.temperatura} + '°C'">28°C</p>
+                    <p class="card-text fs-5" th:text="${cidade.descricao}">Céu Limpo ☀️</p>
+                </div>
+                <div class="card-footer bg-transparent border-0 text-muted">
+                    <small>Fonte: Open-Meteo API</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="text-center mt-5 mb-4 text-muted">
+    <p>© 2026 - Desenvolvido no Desafio 50 Dias de Java</p>
+</footer>
+
+</body>
+</html>

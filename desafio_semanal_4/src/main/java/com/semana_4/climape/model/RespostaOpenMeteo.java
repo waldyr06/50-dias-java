@@ -4,6 +4,7 @@ import lombok.Data;
 
 @Data
 public class RespostaOpenMeteo {
+    @Data
     public static class CurrentWeather {
         private Double temperature;
         private Integer weathercode;
