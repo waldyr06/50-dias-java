@@ -4,7 +4,6 @@ import com.semana_4.climape.client.OpenMeteoClient;
 import com.semana_4.climape.model.Cidade;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.semana_4.climape.model.RespostaOpenMeteo; // Importante!
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,6 +12,10 @@ import java.util.List;
 public class ClimaService {
     @Autowired
     private OpenMeteoClient assistente;
+
+    public ClimaService(OpenMeteoClient assistente) {
+        this.assistente = assistente;
+    }
 
     private String tradutor(int codigo) {
 
@@ -53,6 +56,9 @@ public class ClimaService {
             adicionarCidade("Petrolina", -9.39, -40.50, lista);
             adicionarCidade("Garanhuns", -8.89, -36.49, lista);
             adicionarCidade("Fernando de Noronha", -3.84, -32.41, lista);
+            adicionarCidade("Olinda",-7.99, -34.84, lista);
+            adicionarCidade("Salgueiro", -8.07, -39.12, lista);
+            adicionarCidade("Jaboatão dos Guararapes", -8.12, -35.01, lista);
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -69,4 +75,3 @@ public class ClimaService {
         lista.add(new Cidade(nome, resposta.getCurrent_weather().getTemperature(), clima, ""));
     }
 }
-
